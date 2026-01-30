@@ -95,9 +95,22 @@
     #skills .skills-container{
       display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
     }
+    .skill-category {
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom:25px;
+      width:100%;
+    }
+    .skills-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:15px;
+    }
     .skill{
       background:#e6f5f2; padding:15px 25px; border-radius:12px;
-      font-weight:500; transition:transform 0.3s, background 0.3s; width:240px;
+      font-weight:500; transition:transform 0.3s, background 0.3s; width:100%;
     }
     .skill:hover{ transform:scale(1.05); background:#d0f0e7; }
     .progress-bar{ background:#cceee1; height:8px; border-radius:5px; margin-top:5px; overflow:hidden; }
@@ -156,29 +169,54 @@
   <!-- Hero -->
   <section class="hero" id="about">
     <h1>Hi, I'm Samuel Obute</h1>
-    <p>I'm a self-taught Full-Stack Developer specializing in React, TypeScript, Node.js, and modern databases. I build complete web applications from concept to deployment.</p>
-    <p>Currently leading development at <strong>SahmTicketHub</strong> - a ticketing platform built with React, TypeScript, Supabase, and Node.js.</p>
+    <p>I'm a <strong>Full-Stack Developer</strong> with professional experience at <strong>BloomBinary</strong>, specializing in React, TypeScript, Node.js, and modern databases. I build complete web applications from concept to deployment within collaborative team environments.</p>
+    <p>Currently leading development at <strong>SahmTicketHub</strong> while working with agile development teams at BloomBinary to deliver client-facing web applications.</p>
     <a href="#projects" class="btn-primary">View My Work</a>
     <div class="scroll-down">&#x2193;</div>
   </section>
 
   <!-- Skills -->
   <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <p style="text-align:center; margin-bottom:30px;">Technologies I work with professionally and through projects.</p>
+    <h2 class="section-title">Skills & Technologies</h2>
+    <p style="text-align:center; margin-bottom:30px;">Technologies I work with professionally at BloomBinary and through projects.</p>
+    
     <div class="skills-container">
-      <div class="skill">HTML5<div class="progress-bar"><div class="progress-bar-fill" data-fill="90%"></div></div></div>
-      <div class="skill">CSS3<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
-      <div class="skill">JavaScript (ES6)<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
-      <div class="skill">TypeScript<div class="progress-bar"><div class="progress-bar-fill" data-fill="80%"></div></div></div>
-      <div class="skill">React + Vite<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
-      <div class="skill">Tailwind CSS<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
-      <div class="skill">Node.js<div class="progress-bar"><div class="progress-bar-fill" data-fill="80%"></div></div></div>
-      <div class="skill">Supabase<div class="progress-bar"><div class="progress-bar-fill" data-fill="75%"></div></div></div>
-      <div class="skill">PostgreSQL<div class="progress-bar"><div class="progress-bar-fill" data-fill="75%"></div></div></div>
-      <div class="skill">REST APIs<div class="progress-bar"><div class="progress-bar-fill" data-fill="80%"></div></div></div>
-      <div class="skill">Git / GitHub<div class="progress-bar"><div class="progress-bar-fill" data-fill="95%"></div></div></div>
-      <div class="skill">Firebase<div class="progress-bar"><div class="progress-bar-fill" data-fill="75%"></div></div></div>
+      <!-- Frontend -->
+      <div class="skill-category">
+        <h3 style="color:var(--primary-color); margin-bottom:15px;">Frontend</h3>
+        <div class="skills-grid">
+          <div class="skill">HTML5<div class="progress-bar"><div class="progress-bar-fill" data-fill="95%"></div></div></div>
+          <div class="skill">CSS3<div class="progress-bar"><div class="progress-bar-fill" data-fill="90%"></div></div></div>
+          <div class="skill">JavaScript (ES6)<div class="progress-bar"><div class="progress-bar-fill" data-fill="92%"></div></div></div>
+          <div class="skill">TypeScript<div class="progress-bar"><div class="progress-bar-fill" data-fill="88%"></div></div></div>
+          <div class="skill">React<div class="progress-bar"><div class="progress-bar-fill" data-fill="90%"></div></div></div>
+          <div class="skill">Tailwind CSS<div class="progress-bar"><div class="progress-bar-fill" data-fill="90%"></div></div></div>
+        </div>
+      </div>
+      
+      <!-- Backend & Database -->
+      <div class="skill-category">
+        <h3 style="color:var(--primary-color); margin-bottom:15px;">Backend & Database</h3>
+        <div class="skills-grid">
+          <div class="skill">Node.js<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
+          <div class="skill">REST APIs<div class="progress-bar"><div class="progress-bar-fill" data-fill="88%"></div></div></div>
+          <div class="skill">PostgreSQL<div class="progress-bar"><div class="progress-bar-fill" data-fill="82%"></div></div></div>
+          <div class="skill">Supabase<div class="progress-bar"><div class="progress-bar-fill" data-fill="80%"></div></div></div>
+          <div class="skill">Firebase<div class="progress-bar"><div class="progress-bar-fill" data-fill="78%"></div></div></div>
+        </div>
+      </div>
+      
+      <!-- Tools & Collaboration -->
+      <div class="skill-category">
+        <h3 style="color:var(--primary-color); margin-bottom:15px;">Tools & Collaboration</h3>
+        <div class="skills-grid">
+          <div class="skill">Git / GitHub<div class="progress-bar"><div class="progress-bar-fill" data-fill="95%"></div></div></div>
+          <div class="skill">Agile Methodologies<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
+          <div class="skill">Team Collaboration<div class="progress-bar"><div class="progress-bar-fill" data-fill="90%"></div></div></div>
+          <div class="skill">Code Review<div class="progress-bar"><div class="progress-bar-fill" data-fill="88%"></div></div></div>
+          <div class="skill">Pair Programming<div class="progress-bar"><div class="progress-bar-fill" data-fill="85%"></div></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -373,7 +411,7 @@
       </a>
     </div>
     <p style="margin-top:30px; font-style:italic; font-size:0.9rem;">
-      P.S. Currently working full-time on <a href="https://sahmtickethub.online" style="color:var(--primary-color); font-weight:bold;">SahmTicketHub</a> - Africa's fastest-growing ticketing platform.
+      Currently contributing to projects at <strong>BloomBinary</strong> while developing <a href="https://sahmtickethub.online" style="color:var(--primary-color); font-weight:bold;">SahmTicketHub</a>.
     </p>
   </section>
 
