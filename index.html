@@ -112,7 +112,7 @@
     color:var(--muted); transition:color 0.3s; position:relative;
   }
   nav a:hover{ color:var(--text); }
-  .hamburger{ display:none; cursor:pointer; flex-direction:column; gap:5px; }
+  .hamburger{ display:none; cursor:pointer; flex-direction:column; gap:5px; z-index:1001; }
   .hamburger div{ width:22px; height:2px; background:var(--text); transition:0.3s; }
   @media(max-width:768px){
     nav ul{
@@ -216,6 +216,23 @@
     transition:background 0.25s;
   }
   .overlay a:hover{ background:var(--amber-soft); }
+
+  /* ---- FIX: on touch devices there is no reliable :hover, so the overlay
+     links above were effectively untappable. Convert the overlay into an
+     always-visible static bar for touch/mobile. ---- */
+  @media (hover: none), (max-width:768px){
+    .overlay{
+      position:static;
+      opacity:1;
+      background:none;
+      padding:12px 14px 0;
+      justify-content:flex-start;
+      flex-wrap:wrap;
+    }
+    .overlay a{ padding:8px 14px; }
+    .project-image img{ height:180px; }
+  }
+
   .badge{
     display:inline-block; background:var(--panel-alt); color:var(--muted);
     padding:5px 10px; margin:3px 6px 3px 0; font-size:0.72rem;
